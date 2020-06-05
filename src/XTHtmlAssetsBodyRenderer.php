@@ -10,12 +10,13 @@
  * @see         https://www.extly.com
  */
 
-namespace Joomla\CMS\Document\Renderer\Html;
+namespace Extly\CMS\Document\Renderer\Html;
 
 \defined('JPATH_PLATFORM') or die;
 
 use Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
 use Extly\Infrastructure\Support\HtmlAsset\Repository;
+use Joomla\CMS\Document\Renderer\Html\HeadRenderer;
 
 /**
  * HTML document renderer for the document `<head>` element.

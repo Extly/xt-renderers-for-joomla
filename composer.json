@@ -8,8 +8,11 @@
     }
   ],
   "autoload": {
+    "files": [
+      "src/ClassAliasMap.php"
+    ],
     "psr-4": {
-      "Joomla\\CMS\\Document\\Renderer\\Html\\": "src/"
+      "Extly\\CMS\\Document\\Renderer\\Html\\": "src/"
     }
   },
   "config": {
