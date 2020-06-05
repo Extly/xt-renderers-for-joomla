@@ -10,13 +10,30 @@
  * @see         https://www.extly.com
  */
 
- // Aliases only to be used with the PHP-Prefixer
-class_alias(
-    XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
-    'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer'
-);
+// Aliases only to be used with the PHP-Prefixer
 
-class_alias(
-    XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
-    'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer'
-);
+if (class_exists('Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer')) {
+    class_alias(
+        Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
+        'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer'
+    );
+
+    class_alias(
+        Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
+        'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer'
+    );
+
+    return;
+}
+
+if (class_exists('XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer')) {
+    class_alias(
+        XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
+        'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer'
+    );
+
+    class_alias(
+        XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
+        'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer'
+    );
+}
