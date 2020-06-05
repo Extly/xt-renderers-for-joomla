@@ -10,12 +10,13 @@
  * @see         https://www.extly.com
  */
 
+ // Aliases only to be used with the PHP-Prefixer
 class_alias(
-    Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
+    XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
     'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer'
 );
 
 class_alias(
-    Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
+    XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
     'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer'
 );
