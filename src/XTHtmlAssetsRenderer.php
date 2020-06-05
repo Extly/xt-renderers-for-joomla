@@ -36,7 +36,7 @@ class XTHtmlAssetsRenderer extends HeadRenderer
     public function render($head, $params = [], $content = null)
     {
         $document = $this->_doc;
-        $allowedScriptsAndStylesheets = Collection::create(
+        $allowedScriptsAndStylesheets = new Collection(
             preg_split(
                 '/[\s,]+/',
                 $document->params->get('allowedScriptsAndStylesheets')
@@ -45,19 +45,19 @@ class XTHtmlAssetsRenderer extends HeadRenderer
 
         // Nothing loaded by default
         $document->_styleSheets = $this->filter(
-            Collection::create($document->_styleSheets),
+            new Collection($document->_styleSheets),
             $allowedScriptsAndStylesheets
         );
         $document->_style = $this->filter(
-            Collection::create($document->_style),
+            new Collection($document->_style),
             $allowedScriptsAndStylesheets
         );
         $document->_scripts = $this->filter(
-            Collection::create($document->_scripts),
+            new Collection($document->_scripts),
             $allowedScriptsAndStylesheets
         );
         $document->_script = $this->filter(
-            Collection::create($document->_script),
+            new Collection($document->_script),
             $allowedScriptsAndStylesheets
         );
 
