@@ -60,6 +60,10 @@ class XTHtmlAssetsRenderer extends HeadRenderer
             new Collection($document->_script),
             $allowedScriptsAndStylesheets
         );
+        $document->_custom = $this->filter(
+            new Collection($document->_custom),
+            $allowedScriptsAndStylesheets
+        );
 
         // My Script and Styles
         $headScript = HtmlAssetTagsBuilder::create()->generate(Repository::GLOBAL_POSITION_HEAD);
