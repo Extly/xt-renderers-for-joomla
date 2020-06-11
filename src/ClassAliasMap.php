@@ -12,14 +12,14 @@
 
 // Aliases only to be used with the PHP-Prefixer
 
-if (class_exists('XTT_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer')) {
+if (class_exists('XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer')) {
     class_alias(
-        XTT_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
+        XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer::class,
         'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsBodyRenderer'
     );
 
     class_alias(
-        XTT_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
+        XTP_BUILD\Extly\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer::class,
         'Joomla\CMS\Document\Renderer\Html\XTHtmlAssetsRenderer'
     );
 
