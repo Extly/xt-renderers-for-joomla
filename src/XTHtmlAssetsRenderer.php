@@ -4,15 +4,15 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2020 Extly, CB. All rights reserved.
- * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPLv3
+ * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
+ * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
  */
 
 namespace Extly\CMS\Document\Renderer\Html;
 
-\defined('JPATH_PLATFORM') or die;
+\defined('JPATH_PLATFORM') || exit;
 
 use Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
 use Extly\Infrastructure\Support\HtmlAsset\Repository;
@@ -66,7 +66,7 @@ class XTHtmlAssetsRenderer extends HeadRenderer
         );
 
         // My Script and Styles
-        $headScript = HtmlAssetTagsBuilder::create()->generate(Repository::GLOBAL_POSITION_HEAD);
+        $headScript = (new HtmlAssetTagsBuilder())->generate(Repository::GLOBAL_POSITION_HEAD);
 
         return parent::render($head, $params, $content).$headScript;
     }
