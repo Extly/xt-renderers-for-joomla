@@ -4,7 +4,7 @@
  * @package     Extly Infrastructure Support
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2024 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2025 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -80,21 +80,17 @@ class XTHtmlAssetsRenderer extends HeadRenderer
                 }
 
                 // Test File Key
-                if (false !== strpos($key, $keyword)) {
+                if (false !== strpos($key, (string) $keyword)) {
                     return true;
                 }
 
                 // Test Item
-                if (\is_string($item) && false !== strpos($item, $keyword)) {
+                if (\is_string($item) && false !== strpos($item, (string) $keyword)) {
                     return true;
                 }
 
                 // Test Type
-                if (\is_array($item) && isset($item['type']) && false !== strpos($item['type'], $keyword)) {
-                    return true;
-                }
-
-                return false;
+                return (bool) (\is_array($item) && isset($item['type']) && false !== strpos($item['type'], (string) $keyword));
             });
 
             return null !== $matched;
