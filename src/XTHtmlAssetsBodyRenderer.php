@@ -14,9 +14,9 @@ namespace Joomla\CMS\Document\Renderer\Html;
 
 \defined('JPATH_PLATFORM') || exit;
 
-use Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
-use Extly\Infrastructure\Support\HtmlAsset\Repository;
 use Joomla\CMS\Document\Renderer\Html\HeadRenderer;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\HtmlAssetTagsBuilder;
+use XTP_BUILD\Extly\Infrastructure\Support\HtmlAsset\Repository;
 
 /**
  * HTML document renderer for the document `<head>` element.
