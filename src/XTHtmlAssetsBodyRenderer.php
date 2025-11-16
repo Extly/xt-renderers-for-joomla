@@ -10,7 +10,7 @@
  * @see         https://www.extly.com
  */
 
-namespace Extly\CMS\Document\Renderer\Html;
+namespace Joomla\CMS\Document\Renderer\Html;
 
 \defined('JPATH_PLATFORM') || exit;
 

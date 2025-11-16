@@ -1,6 +1,6 @@
 {
   "name": "extly/xt-renderers-for-joomla",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "XT Tailwind for Extly template, based on Tailwind CSS.",
   "authors": [
     {
@@ -13,11 +13,17 @@
     "anibalsanchez/extly-html-asset-tags-builder": "^2.0",
     "anibalsanchez/extly-infrastructure-cms-contract": "^2.0"
   },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:anibalsanchez/extly-infrastructure-cms-contract.git"
+    }
+  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Extly\\CMS\\Document\\Renderer\\Html\\": "src/"
+      "Joomla\\CMS\\Document\\Renderer\\Html\\": "src/"
     }
   },
   "config": {
