@@ -1,6 +1,6 @@
 {
   "name": "extly/xt-renderers-for-joomla",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "XT Tailwind for Extly template, based on Tailwind CSS.",
   "authors": [
     {
@@ -9,10 +9,9 @@
     }
   ],
   "require": {
-    "php": "^7.3 || ^8.0",
-    "anibalsanchez/extly-html-asset-tags-builder": "^1.7.0",
-    "doctrine/inflector": "~1.1.0 || ^1.4 || ^2.0",
-    "illuminate/support": "~5.4.0 || ^6.0 || ^7.0"
+    "php": "^8.0",
+    "anibalsanchez/extly-html-asset-tags-builder": "^2.0",
+    "anibalsanchez/extly-infrastructure-cms-contract": "^2.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -24,7 +23,7 @@
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.4.33"
+      "php": "8.0.30"
     },
     "platform-check": false,
     "preferred-install": "dist",

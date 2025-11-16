@@ -80,17 +80,17 @@ class XTHtmlAssetsRenderer extends HeadRenderer
                 }
 
                 // Test File Key
-                if (false !== strpos($key, (string) $keyword)) {
+                if (str_contains($key, (string) $keyword)) {
                     return true;
                 }
 
                 // Test Item
-                if (\is_string($item) && false !== strpos($item, (string) $keyword)) {
+                if (\is_string($item) && str_contains($item, (string) $keyword)) {
                     return true;
                 }
 
                 // Test Type
-                return (bool) (\is_array($item) && isset($item['type']) && false !== strpos($item['type'], (string) $keyword));
+                return (bool) (\is_array($item) && isset($item['type']) && str_contains($item['type'], (string) $keyword));
             });
 
             return null !== $matched;
